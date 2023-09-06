@@ -1,0 +1,315 @@
+<odoo>
+    <template id="kw_invoice_letter_authority_template">
+        <t t-call="web.basic_layout">
+            <t t-set="doc" t-value="doc.with_context({'lang':'uk_UA'})"/>
+            <t t-set="no_vat" t-value="true"/>
+            <div>
+            <table width="100%" cellpadding="0" cellspacing="0" align="center"
+                   border="0" class="no_border_table">
+                <style>
+                th {
+                line-height:1.4
+                }
+                td {
+                line-height:1.4
+                }
+            </style>
+                <tr>
+                    <td width="65%"/>
+                    <td width="35%" class="text-left">
+                        <small>Додаток 1</small>
+                        <br/>
+                        <small>до Інструкції про порядок реєстрації</small>
+                        <br/>
+                        <small>виданих, повернених і використаних</small>
+                        <br/>
+                        <small>довіреностей на одержання цінностей</small>
+                        <h6> Типова форма N M2</h6>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%"  cellpadding="0" cellspacing="0" style="border: 1px solid black;">
+                <tr>
+                    <td width="50%" class="bottom_border" align="center" >
+<!--                        <small>___________________________________________________________________________</small>-->
+                        <t t-if="doc.company_id.partner_id.legal_name">
+                            <small><span t-field="doc.company_id.partner_id.legal_name"/></small>
+                        </t>
+                        <t t-else="">
+                            <small><span t-field="doc.company_id.partner_id.name"/></small>
+                        </t>
+                        <t t-if="doc.company_id and doc.company_id.partner_id">
+                            <small><span t-field="doc.company_id.partner_id.legal_address.name"/></small>
+                        </t>
+                    </td>
+                    <td width="50%" style="border-left: 1px solid black;"/>
+                </tr>
+                <tr>
+                    <td width="50%" style="font-size: 10px;" align="center">підприємство-одержувач і його адреса</td>
+                    <td width="50%" style="border-left: 1px solid black;"/>
+                </tr>
+                <tr>
+                    <td width="50%" align="left"><small>ідентифікаційний</small></td>
+                    <td width="50%" style="border-left: 1px solid black;"/>
+                </tr>
+                <tr>
+                    <td width="50%" align="left"><small>код ЄДРПОУ</small>
+                        <t t-if="doc.company_id.partner_id.enterprise_code">
+                            <small><span t-field="doc.company_id.partner_id.enterprise_code"/></small>
+                        </t>
+                        <t t-else="">
+                            <small>____________________________________________________________</small>
+                        </t>
+<!--                    <small><span t-field="doc.company_id.partner_id.enterprise_code"/></small>-->
+                    </td>
+<!--                    <td width="50%" class="bottom_border">spavn</td>-->
+                    <td width="50%" style="border-left: 1px solid black;"/>
+                </tr>
+                <tr>
+                    <td width="50%" class="bottom_border" align="center"><small>Той самий</small></td>
+                    <td width="50%" style="border-left: 1px solid black;"/>
+                </tr>
+                <tr>
+                    <td width="50%" style="font-size: 10px;" align="center">підприємство-платник і його адреса</td>
+                    <td width="50%" style="border-left: 1px solid black;"/>
+                </tr>
+                <tr>
+                    <td width="50%" class="text-center"><small>рахунок</small>
+                        <t t-if="doc.company_id and doc.company_id.partner_id and doc.company_id.partner_id.bank_ids and doc.company_id.partner_id.bank_ids[0].acc_number">
+                            <small><span t-field="doc.company_id.partner_id.bank_ids[0].acc_number"/></small>
+                        </t>
+                        <t t-else="">
+                            <small>________________________________________________</small>
+                        </t>
+                        <small>МФО</small></td>
+                    <td width="50%" class="text-right" style="border-left: 1px solid black;"><small>Довіреність дійсна</small></td>
+                </tr>
+                <tr>
+                    <td width="50%" class="bottom_border" align="center">
+                        <t t-if="doc.company_id and doc.company_id.partner_id and doc.company_id.partner_id.bank_ids and doc.company_id.partner_id.bank_ids[0].bank_id">
+                            <small><span t-field="doc.company_id.partner_id.bank_ids[0].bank_id.bic"/></small>
+                            <small><span t-field="doc.company_id.partner_id.bank_ids[0].bank_id.name"/></small>
+                        </t>
+                        <t t-else="">
+                            <small>___________________________________________________________________________</small>
+                        </t></td>
+                    <td width="50%" class="text-right" style="border-left: 1px solid black;" ><small>до</small> <small><b><span t-field="doc.valid_until"/></b></small> <small>р</small></td>
+                </tr>
+                <tr>
+                    <td width="50%" style="font-size: 10px;" align="center">(найменування банку)</td>
+                    <td width="50%" style="border-left: 1px solid black;"/>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <br/>
+                    <td width="100%" align="center">
+                        <b>
+                            <h4>Довіреність №
+                            <span t-field="doc.number_document"/></h4>
+                            Дата видачі
+                            <b><span t-field="doc.date_issue"/></b>р
+                            <br/>
+                            <br/>
+                        </b>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0"
+                   class="no_border_table">
+                <tr>
+                    <td class="text-left" width="20%">Видано</td>
+                    <th class="text-left" width="80%"><b><span t-field="doc.hr_employee_id.name"/></b></th>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0"
+                   class="no_border_table">
+                <tr>
+                    <td class="text-left" width="40%">Документ, що засвідчує особу</td>
+                    <th class="text-left" width="60%"><b><span t-field="doc.hr_employee_id.type_document"/></b></th>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0"
+                   class="no_border_table">
+                <tr>
+                    <td class="text-left" width="10%">Серія</td>
+                    <th class="text-left" width="10%"><b><span t-field="doc.hr_employee_id.serial_document"/></b></th>
+                    <td class="text-left" width="10%">№</td>
+                    <th class="text-left" width="20%"><b><span t-field="doc.hr_employee_id.number_document"/></b></th>
+                    <td class="text-left" width="10%">від</td>
+                    <th class="text-left" width="30%"><b><span t-field="doc.hr_employee_id.issued_date"/></b>р</th>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0"
+                   class="no_border_table">
+                <tr>
+                    <td class="text-left" width="20%">Виданий</td>
+                    <th class="text-left" width="80%"><b><span t-field="doc.hr_employee_id.issued"/></b></th>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0"
+                   class="no_border_table">
+                <tr>
+                    <td class="text-left" width="30%">На отримання від</td>
+                    <th class="text-left" width="70%"><b><span t-field="doc.partner_id.name"/></b></th>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0"
+                   class="no_border_table">
+                <tr>
+                    <td class="text-left" width="20%">цінностей за</td>
+                    <th class="text-right" width="20%"><b><span t-field="doc.ref"/></b></th>
+                    <td class="text-right" width="10%"> від </td>
+                    <th class="text-center" width="50%"><b><span t-field="doc.invoice_date"/></b>р</th>
+                </tr>
+            </table>
+        <p style="page-break-before:always;"></p>
+            <br/>
+            <br/>
+        <div>
+            <p style="text-align: right">Зворотний бік форми N М-2</p>
+        </div>
+            <table width="100%" cellpadding="0" cellspacing="0"
+                   class="no_border_table">
+                <tr>
+                    <td class="text-left" width="100%"> Перелік цінностей, які належать отримати:</td>
+                </tr>
+            </table>
+            <style>
+                #o_main_table td, #o_main_table th,
+                #o_sub_table td, #o_sub_table th {
+                padding: 0px 10px;
+                }
+            </style>
+            <style>
+                #o_main_table td {
+                padding: 0px 10px;
+                border: 1px solid black;
+                }
+            </style>
+            <table width="100%" id="o_main_table"
+                   class="table table-sm o_main_table" border="1"
+                   cellspacing="0"
+                   cellpadding="2" style="border-collapse: collapse;">
+                <thead style="display: table-row-group">
+<!--                    <br/>-->
+                    <tr>
+                        <td name="th_number" class="text-center">
+                            <b>№</b>
+                        </td>
+                        <td name="th_description" class="text-center">
+                            <b>
+                                Найменування цінностей
+                            </b>
+                        </td>
+                        <td name="th_units" class="text-center">
+                            <b>Од.виміру</b>
+                        </td>
+                        <td name="th_quantity" class="text-center">
+                            <b>Кіл-сть
+                            </b>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody class="sale_tbody">
+
+                    <t t-set="current_subtotal" t-value="0"/>
+                    <t t-set="current_row_number" t-value="0"/>
+
+                    <t t-foreach="doc.invoice_line_ids" t-as="line">
+
+                        <t t-set="current_subtotal"
+                           t-value="current_subtotal + line.price_subtotal"
+                           groups="account.group_show_line_subtotals_tax_excluded"/>
+                        <t t-set="current_subtotal"
+                           t-value="current_subtotal + line.price_total"
+                           groups="account.group_show_line_subtotals_tax_included"/>
+
+                        <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_narration' if line.display_type == 'line_narration' else ''">
+                            <t t-if="not line.price_unit == 0 and line.kw_is_added_to_doc">
+                                <td name="td_number" align="center">
+                                    <t t-set="current_row_number"
+                                        t-value="current_row_number + 1"/>
+                                    <span t-raw="current_row_number"
+                                          style="text-indent:10px"/>
+                                </td>
+                                <td name="td_name">
+                                    <span t-field="line.name"
+                                          style="text-indent:10px"/>
+                                </td>
+                                <td name="td_units" class="text-center"
+                                    align="center">
+                                    <span t-field="line.product_uom_id"/>
+                                </td>
+                                <td name="td_quantity" class="text-center"
+                                    align="right">
+                                    <span t-field="line.quantity"/>
+                                </td>
+                            </t>
+                            <t t-if="line.display_type == 'line_section'">
+                                <td name="td_section_line" colspan="99">
+                                    <span t-field="line.name"/>
+                                </td>
+                                <t t-set="current_section" t-value="line"/>
+                                <t t-set="current_subtotal" t-value="0"/>
+                            </t>
+                            <t t-if="line.display_type == 'line_narration'">
+                                <td name="td_narration_line" colspan="99">
+                                    <span t-field="line.name"/>
+                                </td>
+                            </t>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" align="center"
+                   class="no_border_table">
+                <tr>
+                    <td width="15%">Підпис</td>
+                    <td width="70%" style="border-bottom: 1px solid black;"></td>
+                    <td width="15%" class="text-center">засвідчую</td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td style="font-size: 14px;" align="center">(зразок підпису особи, що
+                        одержала довіреність)
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" align="center"
+                   class="no_border_table">
+                <br/>
+                <tr>
+                    <td class="text-left" width="30%">Керівник Підприємства</td>
+                    <th class="text-left" width="70%"><b><span t-field="doc.head_enterprise_id.name"/></b></th>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" align="center"
+                   class="no_border_table">
+                <tr>
+                    <td class="text-left" width="30%">Головний бухгалтер</td>
+                    <th class="text-left" width="70%"><b><span t-field="doc.chief_accountant_id.name"/></b></th>
+                </tr>
+            </table>
+            <table width="100%" cellpadding="0" cellspacing="0" align="center"
+                   class="no_border_table">
+                <br/>
+<!--                <br/>-->
+                <tr>
+                    <td class="text-left" width="100%">Місце печатки</td>
+                </tr>
+            </table>
+            </div>
+        </t>
+    </template>
+
+
+    <template id="kw_invoice_letter_authority_container">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="kw_invoice_letter_authority.kw_invoice_letter_authority_template"
+                   t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>
