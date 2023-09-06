@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_invoice_chek
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-07 09:10+0000\n"
+"PO-Revision-Date: 2021-09-07 09:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_invoice_chek
+#: model:ir.actions.report,print_report_name:kw_invoice_chek.kw_invoice_chek_account_move_report
+msgid ""
+"(object.state in ('draft', 'sent') and 'Tovarniy chek - %s' % (object.name))"
+" or 'Tovarniy chek - %s' % (object.name)"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid ""
+"<br/>\n"
+"                            Товарний чек №"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid ""
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Сума без ПДВ</span>\n"
+"                            <span groups=\"account.group_show_line_subtotals_tax_included\">Сума</span>"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "<span style=\"white-space:nowrap;\">______________________________</span>"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "<sub>Штамп підприємства</sub>"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model:ir.actions.report,name:kw_invoice_chek.kw_invoice_chek_account_move_report
+msgid "Tovarniy Chek Invoice"
+msgstr "Товарний чек"
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "Всього на суму"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "Кіл-сть"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "Найменування"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "Од.вим."
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid ""
+"Товар відпустив:\n"
+"                        <span style=\"white-space:nowrap;\">____________________</span>"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "Ціна без ПДВ"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "в т.ч. ПДВ :"
+msgstr ""
+
+#. module: kw_invoice_chek
+#: model_terms:ir.ui.view,arch_db:kw_invoice_chek.kw_invoice_chek_template
+msgid "року"
+msgstr ""
