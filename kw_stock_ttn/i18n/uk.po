@@ -1,0 +1,420 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_stock_ttn
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-10 09:13+0000\n"
+"PO-Revision-Date: 2022-06-10 09:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_stock_ttn
+#: model:ir.actions.report,print_report_name:kw_stock_ttn.kw_stock_ttn_ttn_report
+msgid ""
+"(object.state in ('draft', 'sent') and 'Nakladna - %s' % (object.name)) or "
+"'Nakladna - %s' % (object.name)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ""
+"(П. І.\n"
+"                                Б., посада, підпис)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ""
+"(П. І. Б.,\n"
+"                        номер посвідчення водія)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ""
+"(П. І. Б.,\n"
+"                        посада, підпис)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "(П. І. Б., посада, підпис)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "(місцезнаходження)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ""
+"(найменування /\n"
+"                        П. І. Б.)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ""
+"(повне\n"
+"                        найменування, місцезнаходження / П. І. Б., місце\n"
+"                        проживання)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "(словами)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ""
+"(словами, з\n"
+"                        урахуванням ПДВ)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ", у т. ч. ПДВ"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<b>Автомобіль</b>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<b>Вид перевезень</b>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<b>Причіп/напівпричіп</b>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<small>довжина/ ширина/ висота</small>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<small>загальна вага, у тому числі з вантажем</small>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<small>марка, модель, тип, реєстраційний номер</small>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<small>маса брутто</small>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>10</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>11</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>12</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>13</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>14</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>15</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>1</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>2</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>3</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>4</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>5</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>6</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>7</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>8</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "<strong>9</strong>"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "N<br/>з/п"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model:ir.actions.report,name:kw_stock_ttn.kw_stock_ttn_ttn_report
+msgid "Tovarna Transportna Nakladna A4"
+msgstr "Товарно транспортна накладна А4"
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Автомобільний перевізник"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "ВІДОМОСТІ ПРО ВАНТАЖ"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "ВАНТАЖНО-РОЗВАНТАЖУВАЛЬНІ ОПЕРАЦІЇ"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Вантажовідправник"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Вантажоодержувач"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Вид<br/>пакування"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Водій"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Всього:"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ""
+"Додаток 7\n"
+"                        <br/>\n"
+"                        до Правил перевезень вантажів\n"
+"                        автомобільним транспортом в Україні\n"
+"                        <br/>\n"
+"                        пункт 11.1 глави 11"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Документи з вантажем"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Загальна сума з<br/>ПДВ, грн"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Замовник"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Зворотний бік"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Здав (відповідальна особа вантажовідправника)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Кількість<br/>місць"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Маса брутто, т"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Маса<br/>брутто, т"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Навантаження"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid ""
+"Найменування вантажу (номер контейнера), у\n"
+"                    разі перевезення небезпечних вантажів: клас небезпечних\n"
+"                    речовин, до якого віднесено вантаж"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Одиниця<br/>виміру"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Операція"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Прийняв (відповідальна особа вантажоодержувача)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Пункт навантаження"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Підпис відповідальної особи"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Розвантаження"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Супровідні документи на вантаж"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Товарно транспортна накладна"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Усього відпущено на загальну суму"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Форма N 1-ТН"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Ціна без ПДВ за<br/>одиницю, грн"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "Час (год., хв.)"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "вибуття"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "від"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "кількість місць"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "масою брутто, т"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "отримав водій/експедитор"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "прибуття"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_ttn_stock_picking_ttn_report
+msgid "простою"
+msgstr ""
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_picking_ttn_form
+msgid "Поля для друку ТТН"
+msgstr "TTN Information"
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_picking_ttn_form
+msgid "Carrier"
+msgstr "Автомобільний перевізник"
+
+#. module: kw_stock_ttn
+#: model_terms:ir.ui.view,arch_db:kw_stock_ttn.kw_stock_picking_ttn_form
+msgid "Units"
+msgstr "Одиниця"

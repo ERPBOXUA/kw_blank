@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="kw_stock_picking_ttn_form" model="ir.ui.view">
+        <field name="name">kw.stock.picking.ttn.form</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="model">stock.picking</field>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='note']" position="after">
+                <page string='Інформація ТТН' name="kw_ttn">
+                    <group string="Поля ТТН" name="ttn_info">
+                        <field name="kw_auto_carrier" string="Автомобільний перевізник"/>
+                        <field name="kw_driver" string="Водій"/>
+                        <field name="kw_consignor" string="Вантажовідправник"/>
+                        <field name="kw_loading_point" string="Пункт навантаження"/>
+                        <field name="kw_get_baggage" string="Вантажоодержувач"/>
+                        <field name="kw_qty_seats" string="Кількість місць"/>
+                        <field name="kw_gross_weight" string="Маса бруто,т"/>
+                        <field name="kw_got_driver" string="Отримав водій/експедитор"/>
+                        <field name="kw_total_verbs" string="Загальна сума"/>
+                        <field name="kw_pdv" string="ПДВ"/>
+                        <field name="kw_total_summ_line" invisible="1"/>
+                        <field name="kw_documents_for_baggage" string="Супровідні документи"/>
+                        <field name="kw_zdav" string="Здав"/>
+                        <field name="kw_priyniav" string="Прийняв"/>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//field[@name='move_ids_without_package']//tree//field[@name='product_id']"
+                   position="after">
+                <field name="kw_unit_line" string="Одиниця"/>
+                <field name="kw_qty_seats_line" string="Кількість місць"/>
+                <field name="kw_price_line" string="Ціна"/>
+                <field name="kw_summ" string="Всього"/>
+                <field name="kw_type_package_line" string="Вид пакування"/>
+                <field name="kw_documents_line" string="Документ"/>
+                <field name="kw_gross_weight_line" string="Маса брутто"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
