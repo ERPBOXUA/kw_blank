@@ -1,6 +1,7 @@
 {
     'name': 'Vydatkova Nakladna Invoice for Ukraine',
-    'summary': 'Vydatkova Nakladna Видаткова накладна Бланк "Видаткова накладна Invoice" '
+    'summary': 'Vydatkova Nakladna Видаткова \
+                накладна Бланк "Видаткова накладна Invoice" '
                'Друк/форми бухгалтерського документу/для України/'
                'Видаткова накладна/ Рахунок-фактура/ Invoice',
 
