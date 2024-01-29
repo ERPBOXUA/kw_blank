@@ -1,18 +1,19 @@
 {
     'name': 'Letter Authority Invoice for Ukraine',
-    'summary': 'Letter Authority Довіреність Бланк "Довіреність" Друк/Довіреність/ для України',
+    'summary': 'Letter Authority Довіреність',
 
     'author': 'Kitworks Systems',
     'website': 'https://kitworks.systems/',
 
     'category': 'Accounting',
     'license': 'LGPL-3',
-    'version': '16.0.0.0.1',
+    'version': '14.0.1.0.2',
 
     'depends': [
         'account',
         'kw_invoice_doc_base',
         'kw_account_partner_requisites',
+        'kw_employee_requizites',
     ],
 
     'data': [

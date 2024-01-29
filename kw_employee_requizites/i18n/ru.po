@@ -1,15 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* kw_account_partner_requisites_view
-# 	* kw_account_partner_requisites
 # 	* kw_invoice_letter_authority
+# 	* kw_employee_requizites
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-13 08:34+0000\n"
-"PO-Revision-Date: 2022-06-13 08:34+0000\n"
+"POT-Creation-Date: 2022-06-13 10:39+0000\n"
+"PO-Revision-Date: 2022-06-13 10:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -34,11 +33,6 @@ msgstr ""
 #. module: kw_invoice_letter_authority
 #: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
 msgid "(найменування банку)"
-msgstr ""
-
-#. module: kw_account_partner_requisites_view
-#: model:ir.actions.act_window,name:kw_account_partner_requisites_view.action_partner_category_form
-msgid "123"
 msgstr ""
 
 #. module: kw_invoice_letter_authority
@@ -148,191 +142,94 @@ msgstr ""
 msgid "<small>ідентифікаційний</small>"
 msgstr ""
 
-#. module: kw_account_partner_requisites
-#: model:res.groups,name:kw_account_partner_requisites.group_kw_taxation_scheme_admin
-msgid "Admin"
-msgstr ""
-
-#. module: kw_account_partner_requisites_view
-#: model_terms:ir.ui.view,arch_db:kw_account_partner_requisites_view.res_partner_category_view_search
-msgid "Archived"
-msgstr ""
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__chief_accountant
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__chief_accountant
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__chief_accountant_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__chief_accountant_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__chief_accountant_id
+#: model_terms:ir.ui.view,arch_db:kw_employee_requizites.kw_employee_requizites_account_move_form
 msgid "Chief Accountant"
 msgstr "Головний бухгалтер"
 
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__chief_reason
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__chief_reason
-msgid "Chief Reason"
-msgstr "Керівник діє на підставі"
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__date_issue
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__date_issue
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__date_issue
+msgid "Date of issue"
+msgstr "Дата видачі"
 
-#. module: kw_account_partner_requisites
-#: model:ir.model,name:kw_account_partner_requisites.model_res_partner
-msgid "Contact"
-msgstr "Контакт"
+#. module: kw_employee_requizites
+#: model:ir.model,name:kw_employee_requizites.model_hr_employee
+msgid "Employee"
+msgstr "Співробітник"
 
-#. module: kw_account_partner_requisites_view
-#: model_terms:ir.actions.act_window,help:kw_account_partner_requisites_view.action_partner_category_form
-msgid "Create a new contact tag"
-msgstr ""
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__head_enterprise_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__head_enterprise_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__head_enterprise_id
+msgid "Head Enterprise"
+msgstr "Керівник підприємства"
 
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_kw_taxation_scheme__create_uid
-msgid "Created by"
-msgstr ""
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__hr_employee_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__hr_employee_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__hr_employee_id
+msgid "Hr Employee"
+msgstr "Співробітник"
 
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_kw_taxation_scheme__create_date
-msgid "Created on"
-msgstr ""
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__issued
+msgid "Issued"
+msgstr "Ким виданий"
 
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__chief
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__chief
-msgid "Director"
-msgstr "Керівник"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_kw_taxation_scheme__display_name
-msgid "Display Name"
-msgstr "Відобразити назву"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__enterprise_code
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__enterprise_code
-msgid "Enterprise Code"
-msgstr "Код ЄДРПОУ"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_kw_taxation_scheme__id
-msgid "ID"
-msgstr ""
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__tax_ident_number
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__tax_ident_number
-msgid "Individual tax identification number"
-msgstr "ІПН"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_kw_taxation_scheme____last_update
-msgid "Last Modified on"
-msgstr "Останні зміни на"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_kw_taxation_scheme__write_uid
-msgid "Last Updated by"
-msgstr ""
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_kw_taxation_scheme__write_date
-msgid "Last Updated on"
-msgstr ""
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__legal_address
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__legal_address
-msgid "Legal Address"
-msgstr "Юридична адреса"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__legal_short_name
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__legal_short_name
-msgid "Legal Short Name"
-msgstr "Скорочена назва"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__legal_name
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__legal_name
-msgid "Legal full name"
-msgstr "Повна назва"
+#. module: kw_employee_requizites
+#: model:ir.model,name:kw_employee_requizites.model_account_move
+msgid "Journal Entry"
+msgstr "Запис у журналі"
 
 #. module: kw_invoice_letter_authority
 #: model:ir.actions.report,name:kw_invoice_letter_authority.kw_invoice_letter_authority_account_move_report
 msgid "Letter Authority Invoice"
-msgstr ""
+msgstr "Довіреність"
 
-#. module: kw_account_partner_requisites_view
-#: model_terms:ir.actions.act_window,help:kw_account_partner_requisites_view.action_partner_category_form
-msgid ""
-"Manage contact tags to better classify them for tracking and analysis "
-"purposes."
-msgstr ""
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__number_document
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__number_document
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__number_document
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__number_document
+msgid "Number Document"
+msgstr "Номер документу"
 
-#. module: kw_account_partner_requisites
-#: model:res.groups,name:kw_account_partner_requisites.group_kw_taxation_scheme_manager
-msgid "Manager"
-msgstr ""
+#. module: kw_employee_requizites
+#: model_terms:ir.ui.view,arch_db:kw_employee_requizites.kw_employee_requizites_hr_employee_form
+msgid "Passport"
+msgstr "Документ що засвідчує особу"
 
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_kw_taxation_scheme__name
-msgid "Name"
-msgstr ""
+#. module: kw_employee_requizites
+#: model_terms:ir.ui.view,arch_db:kw_employee_requizites.kw_employee_requizites_account_move_form
+msgid "Power of attorney"
+msgstr "Довіреність"
 
-#. module: kw_account_partner_requisites_view
-#: model_terms:ir.ui.view,arch_db:kw_account_partner_requisites_view.kw_account_partner_requisites_view_res_partner_form
-msgid "Partner Requisites"
-msgstr "Реквізити партнера"
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__serial_document
+msgid "Serial Document"
+msgstr "Серія"
 
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__postal_address
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__postal_address
-msgid "Postal Address"
-msgstr "Поштова адреса"
+#. module: kw_employee_requizites
+#: model_terms:ir.ui.view,arch_db:kw_employee_requizites.kw_employee_requizites_account_move_form
+msgid "The head of the enterprise"
+msgstr "Керівник підприємства"
 
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__responsible_officer
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__responsible_officer
-msgid "Responsible Officer"
-msgstr "Відповідальний співробітник"
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__type_document
+msgid "Type Document"
+msgstr "Тип документу"
 
-#. module: kw_account_partner_requisites_view
-#: model_terms:ir.ui.view,arch_db:kw_account_partner_requisites_view.res_partner_category_view_search
-msgid "Search Partner Category"
-msgstr ""
-
-#. module: kw_account_partner_requisites
-#: model:ir.model,name:kw_account_partner_requisites.model_kw_taxation_scheme
-msgid "Tax Status"
-msgstr ""
-
-#. module: kw_account_partner_requisites_view
-#: model:ir.actions.act_window,name:kw_account_partner_requisites_view.taxation_scheme_action
-#: model:ir.ui.menu,name:kw_account_partner_requisites_view.kw_taxation_scheme_menu
-msgid "Taxation Scheme"
-msgstr "Схема оподаткування"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__kw_taxation_scheme_id
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__kw_taxation_scheme_id
-msgid "Taxation scheme"
-msgstr "Схема оподаткування"
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,help:kw_account_partner_requisites.field_res_partner__legal_short_name
-#: model:ir.model.fields,help:kw_account_partner_requisites.field_res_users__legal_short_name
-msgid "The short legal name of the partner"
-msgstr ""
-
-#. module: kw_account_partner_requisites
-#: model:res.groups,name:kw_account_partner_requisites.group_kw_taxation_scheme_user
-msgid "User"
-msgstr ""
-
-#. module: kw_account_partner_requisites
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_partner__payer_certificate_number
-#: model:ir.model.fields,field_description:kw_account_partner_requisites.field_res_users__payer_certificate_number
-msgid "VAT certificate number"
-msgstr "Номер свідоцтва ПДВ"
-
-#. module: kw_account_partner_requisites_view
-#: model_terms:ir.ui.view,arch_db:kw_account_partner_requisites_view.kw_account_partner_requisites_view_res_partner_form
-msgid "XYZ Ltd"
-msgstr ""
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__valid_until
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__valid_until
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__valid_until
+msgid "Valid Until"
+msgstr "Дійсний до"
 
 #. module: kw_invoice_letter_authority
 #: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
@@ -340,10 +237,10 @@ msgid ""
 "_____________________________________________________________________________________________________________________________________"
 msgstr ""
 
-#. module: kw_account_partner_requisites
-#: model:ir.module.category,name:kw_account_partner_requisites.module_category_kw_taxation_scheme
-msgid "taxation"
-msgstr ""
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__issued_date
+msgid "issuance date"
+msgstr "Коли видано"
 
 #. module: kw_invoice_letter_authority
 #: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
