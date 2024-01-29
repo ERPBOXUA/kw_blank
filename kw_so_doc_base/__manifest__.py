@@ -1,10 +1,10 @@
 {
     'name': 'SO print document for Ukraine',
 
-    'version': '16.0.0.0.1',
+    'version': '14.0.1.0.2',
     'author': 'Kitworks Systems',
     'website': 'https://kitworks.systems/',
-    'license': 'OPL-1',
+    'license': 'LGPL-3',
     'category': 'Accounting',
 
     'depends': ['sale', 'kw_account_partner_requisites', ],

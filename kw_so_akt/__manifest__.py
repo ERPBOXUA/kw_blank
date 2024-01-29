@@ -1,15 +1,13 @@
 {
     'name': 'Akt Vikonanih Robit SO for Ukraine',
-    'summary': 'Akt Vikonanih Robit Акт виконаних робіт Бланк "Акт виконаних робіт Sale Order" '
-               'Друк форми бухгалтерського документу для України'
-               'Замовлення на продаж Sale order',
+    'summary': 'Akt Vikonanih Robit Акт виконаних робіт',
 
     'author': 'Kitworks Systems',
     'website': 'https://kitworks.systems/',
 
     'category': 'Accounting',
     'license': 'LGPL-3',
-    'version': '16.0.0.0.1',
+    'version': '14.0.1.0.3',
 
     'depends': ['sale', 'kw_so_doc_base', 'kw_discount_sum'],
 
