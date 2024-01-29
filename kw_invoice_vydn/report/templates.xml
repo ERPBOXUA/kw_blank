@@ -202,76 +202,84 @@
 
                         <t t-foreach="doc.invoice_line_ids" t-as="line">
 
-                            <t t-set="current_subtotal"
-                               t-value="current_subtotal + line.price_subtotal"
-                               groups="account.group_show_line_subtotals_tax_excluded"/>
-                            <t t-set="current_subtotal"
-                               t-value="current_subtotal + line.price_total"
-                               groups="account.group_show_line_subtotals_tax_included"/>
+<!--                        Приберемо передоплату та розділи з таблиці-->
+                            <t t-if="line.quantity > 0 and line.display_type != 'line_section'">
 
-                            <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_narration' if line.display_type == 'line_narration' else ''">
-                                <t t-if="not line.price_unit == 0 and line.kw_is_added_to_doc">
-                                    <td name="td_number" align="center">
-                                        <t t-set="current_row_number"
-                                           t-value="current_row_number + 1"/>
-                                        <span t-raw="current_row_number"
-                                              style="text-indent:10px"/>
-                                    </td>
-                                    <td name="td_name">
-                                        <span t-field="line.name"
-                                              style="text-indent:10px"/>
-                                    </td>
-                                    <td name="td_quantity" class="text-right"
-                                        align="right">
-                                        <span t-field="line.quantity"/>
-                                    </td>
-                                    <td name="td_units" class="text-right"
-                                        align="center">
-                                        <span t-field="line.product_uom_id"/>
-                                    </td>
-                                    <td name="td_priceunit" class="text-right"
-                                        align="right">
-                                        <span t-field="line.price_unit"/>
-                                    </td>
-                                    <t t-if="doc.kw_discount_sum > 0">
-                                        <td name="td_discount"
-                                            class="text-right"
-                                            align="right">
-                                            <span t-field="line.discount"/>
-                                        </td>
-                                    </t>
-                                    <t t-if="not doc.invoice_line_ids[0].tax_ids.price_include">
-                                        <td name="td_subtotal"
-                                            class="text-right o_price_total"
-                                            align="right">
-                                            <span t-esc="'{:10.2f}'.format(line.price_subtotal).replace('.',',')"
-                                                  groups="account.group_show_line_subtotals_tax_excluded"/>
-                                            <span t-esc="'{:10.2f}'.format(line.price_total).replace('.',',')"
-                                                  groups="account.group_show_line_subtotals_tax_included"/>
-                                        </td>
-                                    </t>
-                                    <t t-if="doc.invoice_line_ids[0].tax_ids.price_include">
-                                        <td name="th_subtotal_in_tax"
-                                            class="text-right o_price_total"
-                                            align="right">
-                                            <span t-esc="'{:10.2f}'.format(line.price_total).replace('.',',')"/>
-                                        </td>
-                                    </t>
 
-                                </t>
-                                <t t-if="line.display_type == 'line_section'">
-                                    <td name="td_section_line" colspan="99">
-                                        <span t-field="line.name"/>
-                                    </td>
-                                    <t t-set="current_section" t-value="line"/>
-                                    <t t-set="current_subtotal" t-value="0"/>
-                                </t>
-                                <t t-if="line.display_type == 'line_narration'">
-                                    <td name="td_narration_line" colspan="99">
-                                        <span t-field="line.name"/>
-                                    </td>
-                                </t>
-                            </tr>
+                                <t t-set="current_subtotal"
+                                   t-value="current_subtotal + line.price_subtotal"
+                                   groups="account.group_show_line_subtotals_tax_excluded"/>
+                                <t t-set="current_subtotal"
+                                   t-value="current_subtotal + line.price_total"
+                                   groups="account.group_show_line_subtotals_tax_included"/>
+
+                                <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_narration' if line.display_type == 'line_narration' else ''">
+                                    <t t-if="not line.display_type and not line.price_unit == 0 and line.kw_is_added_to_doc">
+                                        <td name="td_number" align="center">
+                                            <t t-set="current_row_number"
+                                               t-value="current_row_number + 1"/>
+                                            <span t-raw="current_row_number"
+                                                  style="text-indent:10px"/>
+                                        </td>
+                                        <td name="td_name">
+                                            <span t-field="line.name"
+                                                  style="text-indent:10px"/>
+                                        </td>
+                                        <td name="td_quantity" class="text-right"
+                                            align="right">
+                                            <span t-field="line.quantity"/>
+                                        </td>
+                                        <td name="td_units" class="text-right"
+                                            align="center">
+                                            <span t-field="line.product_uom_id"/>
+                                        </td>
+                                        <td name="td_priceunit" class="text-right"
+                                            align="right">
+                                            <span t-field="line.price_unit"/>
+                                        </td>
+                                        <t t-if="doc.kw_discount_sum > 0">
+                                            <td name="td_discount"
+                                                class="text-right"
+                                                align="right">
+                                                <span t-field="line.discount"/>
+                                            </td>
+                                        </t>
+                                        <t t-if="not doc.invoice_line_ids[0].tax_ids.price_include">
+                                            <td name="td_subtotal"
+                                                class="text-right o_price_total"
+                                                align="right">
+                                                <span t-esc="'{:10.2f}'.format(line.price_subtotal).replace('.',',')"
+                                                      groups="account.group_show_line_subtotals_tax_excluded"/>
+                                                <span t-esc="'{:10.2f}'.format(line.price_total).replace('.',',')"
+                                                      groups="account.group_show_line_subtotals_tax_included"/>
+                                            </td>
+                                        </t>
+                                        <t t-if="doc.invoice_line_ids[0].tax_ids.price_include">
+                                            <td name="th_subtotal_in_tax"
+                                                class="text-right o_price_total"
+                                                align="right">
+                                                <span t-esc="'{:10.2f}'.format(line.price_total).replace('.',',')"/>
+                                            </td>
+                                        </t>
+
+                                    </t>
+                                    <t t-if="line.display_type == 'line_section'">
+                                        <td name="td_section_line" colspan="99">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <t t-set="current_section" t-value="line"/>
+                                        <t t-set="current_subtotal" t-value="0"/>
+                                    </t>
+                                    <t t-if="line.display_type == 'line_narration'">
+                                        <td name="td_narration_line" colspan="99">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                    </t>
+                                </tr>
+
+
+                            </t>
+
                         </t>
                     </tbody>
                 </table>
@@ -281,7 +289,8 @@
                         <td align="right">Разом без ПДВ</td>
 
                         <td align="right" width="130">
-                            <span t-esc="'{:10.2f}'.format(doc.amount_untaxed).replace('.',',')"/>
+<!--                            <span t-esc="'{:10.2f}'.format(doc.amount_untaxed).replace('.',',')"/>-->
+                            <span t-esc="'{:10.2f}'.format(doc.kw_amount_untaxed_vydn).replace('.',',')"/>
                         </td>
                     </tr>
                     <tr>
@@ -302,7 +311,8 @@
                     <tr>
                         <td align="right">Всього з ПДВ</td>
                         <td align="right">
-                            <span t-esc="'{:10.2f}'.format(doc.amount_total).replace('.',',')"/>
+<!--                            <span t-esc="'{:10.2f}'.format(doc.amount_total).replace('.',',')"/>-->
+                            <span t-esc="'{:10.2f}'.format(doc.kw_amount_total_vydn).replace('.',',')"/>
                         </td>
                     </tr>
                 </table>
@@ -318,14 +328,16 @@
                             <span style="white-space:nowrap;">Всього
                                 найменувань:<span t-raw="current_row_number"/>,
                                 на суму :
-                                <span t-esc="'{:10.2f}'.format(doc.amount_total).replace('.',',')"/>
+<!--                                <span t-esc="'{:10.2f}'.format(doc.amount_total).replace('.',',')"/>-->
+                                <span t-esc="'{:10.2f}'.format(doc.kw_amount_total_vydn).replace('.',',')"/>
                                 <span t-esc="doc.kw_currency_name"/>
-                                (<span t-esc="doc.kw_amount_ukr_text"/>)
+<!--                                (<span t-esc="doc.kw_amount_ukr_text"/>)-->
+                                (<span t-esc="doc.kw_amount_ukr_text_vydn"/>)
                             </span>
                             <br/>
                             <t t-if="doc.amount_tax">
                                 <span style="white-space:nowrap;">У т.ч. ПДВ
-                                    <span t-esc="'{:10.2f}'.format(doc.amount_tax)"/>
+                                    <span t-esc="'{:10.2f}'.format(doc.amount_tax).replace('.',',')"/>
                                     <span t-esc="doc.kw_currency_name"/>
                                     (<span t-esc="doc.kw_taxed_ukr_text"/>)
                                 </span>

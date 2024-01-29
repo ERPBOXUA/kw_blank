@@ -1,16 +1,13 @@
 {
     'name': 'Vydatkova Nakladna Invoice for Ukraine',
-    'summary': 'Vydatkova Nakladna Видаткова \
-                накладна Бланк "Видаткова накладна Invoice" '
-               'Друк/форми бухгалтерського документу/для України/'
-               'Видаткова накладна/ Рахунок-фактура/ Invoice',
+    'summary': 'Vydatkova Nakladna Видаткова накладна',
 
     'author': 'Kitworks Systems',
     'website': 'https://kitworks.systems/',
 
     'category': 'Accounting',
     'license': 'LGPL-3',
-    'version': '16.0.0.0.1',
+    'version': '14.0.1.0.4',
 
     'depends': ['account', 'kw_invoice_doc_base', 'kw_discount_sum'],
 
