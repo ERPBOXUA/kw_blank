@@ -7,7 +7,7 @@
 
     'category': 'Accounting',
     'license': 'OPL-1',
-    'version': '16.0.0.0.1',
+    'version': '14.0.1.0.1',
 
     'depends': ['sale', 'account'],
 

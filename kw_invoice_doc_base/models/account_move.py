@@ -31,6 +31,12 @@ class AccountMove(models.Model):
     kw_partner_invoice_id = fields.Many2one(
         comodel_name='res.partner', compute='_compute_kw_partner_invoice_id', )
     kw_contract = fields.Char(string='Agreement')
+    kw_amount_untaxed_vydn = fields.Float(
+        compute='_compute_kw_amount_vydn', )
+    kw_amount_total_vydn = fields.Float(
+        compute='_compute_kw_amount_vydn', )
+    kw_amount_ukr_text_vydn = fields.Char(
+        compute='_compute_kw_amount_ukr_text_vydn', )
 
     def _compute_kw_partner_invoice_id(self):
         for obj in self:
@@ -81,3 +87,23 @@ class AccountMove(models.Model):
                 self.kw_currency_name = obj.currency_id.currency_unit_label
                 self.kw_currency_cent_name = \
                     obj.currency_id.currency_subunit_label
+
+    def _compute_kw_amount_vydn(self):
+        for obj in self:
+            line_ids = self.env['account.move.line'].search([
+                ('move_id', '=', obj.id),
+                ('quantity', '<', 0)])
+            obj.kw_amount_untaxed_vydn = \
+                obj.amount_untaxed + sum(line_ids.mapped('debit'))
+            obj.kw_amount_total_vydn = \
+                obj.amount_total + sum(line_ids.mapped('debit'))
+
+    def _compute_kw_amount_ukr_text_vydn(self):
+        for obj in self:
+            obj.kw_amount_ukr_text_vydn = '{} {} {:0>2} {}'.format(
+                num2words(int(obj.kw_amount_total_vydn), lang='uk'),
+                self.kw_currency_name,
+                round(100 * (obj.kw_amount_total_vydn - int(
+                    obj.kw_amount_total_vydn))),
+                self.kw_currency_cent_name,
+            ).capitalize()

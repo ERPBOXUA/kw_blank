@@ -1,15 +1,13 @@
 {
     'name': 'Akt Vikonanih Robit Invoice for Ukraine',
-    'summary': 'Akt vykonanyh robit Акт виконатих робіт Бланк "Акт виконаних робіт Invoice" '
-               'друкована форма/ Акт виконаних робіт/ '
-               'первинка/ документ/ Рахунок покупцю/Invoice',
+    'summary': 'Akt vykonanyh robit Акт виконатих робіт',
 
     'author': 'Kitworks Systems',
     'website': 'https://kitworks.systems/',
 
     'category': 'Customizations',
     'license': 'LGPL-3',
-    'version': '16.0.0.0.1',
+    'version': '14.0.1.0.3',
 
     'depends': ['account', 'kw_invoice_doc_base', 'kw_discount_sum'],
 
