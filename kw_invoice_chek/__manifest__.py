@@ -1,15 +1,13 @@
 {
     'name': 'Tovarniy Chek Invoice for Ukraine',
-    'summary': 'Tovarniy Chek Товарний чек Бланк "Товарний чек Invoice" '
-               'Друк/форми бухгалтерського документу/для України/'
-               'Рахунок клієнту /Товарний чек/ Invoice',
+    'summary': 'Tovarniy Chek Товарний чек',
 
     'author': 'Kitworks Systems',
     'website': 'https://kitworks.systems/',
 
     'category': 'Customizations',
     'license': 'LGPL-3',
-    'version': '16.0.0.0.1',
+    'version': '14.0.1.0.3',
 
     'depends': ['account', 'kw_invoice_doc_base', 'kw_discount_sum'],
 
