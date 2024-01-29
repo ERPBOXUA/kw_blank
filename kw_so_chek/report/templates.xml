@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="kw_so_chek_template">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="50%">
+                            <sub>Штамп підприємства</sub>
+                        </td>
+                        <td width="50%" align="right">
+                            <h5>
+                                <b>
+                                    <span t-field="doc.date_order"
+                                          t-options="{'format': 'dd MMMM YYYY'}"/>
+                                </b>
+                                <b>року</b>
+                            </h5>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="50%" align="center">
+                            <h4>
+                                <br/>
+                                <b>
+                                    <b>Товарний чек №</b>
+                                    <span t-field="doc.name"/>
+                                </b>
+                            </h4>
+                        </td>
+                    </tr>
+                </table>
+
+                <style>
+                    #o_main_table td {
+                    padding: 0px 10px;
+                    border: 1px solid black;
+                    }
+                </style>
+                <table width="100%" id="o_main_table"
+                       class="table table-sm o_main_table" border="1"
+                       cellspacing="0"
+                       cellpadding="2" style="border-collapse: collapse;">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <td name="th_number" class="text-center">
+                                <b>№</b>
+                            </td>
+                            <td name="th_description" class="text-center">
+                                <b>
+                                    Найменування
+                                </b>
+                            </td>
+                            <td name="th_quantity" class="text-center">
+                                <b>Кіл-сть
+                                </b>
+                            </td>
+                            <td name="th_units" class="text-center">
+                                <b>Од.вим.</b>
+                            </td>
+                            <td name="th_priceunit" class="text-center">
+                                <t t-if="doc.order_line[0].tax_id.price_include">
+                                    <b>Ціна з ПДВ</b>
+                                </t>
+                                <t t-else="">
+                                    <b>Ціна без
+                                        ПДВ
+                                    </b>
+                                </t>
+                            </td>
+                            <t t-if="doc.kw_discount_sum > 0">
+                                <td name="th_discount" class="text-right">
+                                    <b>Знижка, %</b>
+                                </td>
+                            </t>
+                            <td name="th_subtotal" class="text-center">
+                                <span groups="account.group_show_line_subtotals_tax_excluded">
+                                    <b>Сума без ПДВ</b>
+                                </span>
+                                <span groups="account.group_show_line_subtotals_tax_included">
+                                    <b>Сума</b>
+                                </span>
+                            </td>
+
+                            <t t-if="doc.order_line[0].tax_id.price_include">
+                                <td name="th_subtotal_in_tax"
+                                    class="text-center">
+                                    <b>Сума з ПДВ</b>
+                                </td>
+                            </t>
+
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+
+                        <t t-set="current_subtotal" t-value="0"/>
+                        <t t-set="current_row_number" t-value="0"/>
+
+                        <t t-foreach="doc.order_line" t-as="line">
+
+                            <t t-set="current_subtotal"
+                               t-value="current_subtotal + line.price_subtotal"
+                               groups="account.group_show_line_subtotals_tax_excluded"/>
+                            <t t-set="current_subtotal"
+                               t-value="current_subtotal + line.price_total"
+                               groups="account.group_show_line_subtotals_tax_included"/>
+
+                            <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                <t t-if="not line.display_type and not line.price_unit == 0 and line.kw_is_added_to_so">
+                                    <td name="td_number" align="center">
+                                        <t t-set="current_row_number"
+                                           t-value="current_row_number + 1"/>
+                                        <span t-raw="current_row_number"
+                                              style="text-indent:10px"/>
+                                    </td>
+                                    <td name="td_name">
+                                        <span t-field="line.name"
+                                              style="text-indent:10px"/>
+                                    </td>
+                                    <td name="td_quantity" class="text-right"
+                                        align="right">
+                                        <span t-field="line.product_uom_qty"/>
+                                    </td>
+                                    <td name="td_units" class="text-right"
+                                        align="center">
+                                        <span t-field="line.product_uom"/>
+                                    </td>
+                                    <td name="td_priceunit" class="text-right"
+                                        align="right">
+                                        <span t-field="line.price_unit"/>
+                                    </td>
+                                    <t t-if="doc.kw_discount_sum > 0">
+                                        <td name="td_discount"
+                                            class="text-right"
+                                            align="right">
+                                            <span t-field="line.discount"/>
+                                        </td>
+                                    </t>
+                                    <td name="td_subtotal"
+                                        class="text-right o_price_total"
+                                        align="right">
+                                        <span t-esc="'{:10.2f}'.format(line.price_subtotal).replace('.',',')"
+                                              groups="account.group_show_line_subtotals_tax_excluded"/>
+                                        <span t-esc="'{:10.2f}'.format(line.price_total).replace('.',',')"
+                                              groups="account.group_show_line_subtotals_tax_included"/>
+                                    </td>
+                                    <t t-if="doc.order_line[0].tax_id.price_include">
+                                        <td name="th_subtotal_in_tax"
+                                            class="text-right o_price_total"
+                                            align="right">
+                                            <span t-esc="'{:10.2f}'.format(line.price_total).replace('.',',')"/>
+                                        </td>
+                                    </t>
+                                </t>
+                                <t t-if="line.display_type == 'line_section'">
+                                    <td name="td_section_line" colspan="99">
+                                        <span t-field="line.name"/>
+                                    </td>
+                                    <t t-set="current_section" t-value="line"/>
+                                    <t t-set="current_subtotal" t-value="0"/>
+                                </t>
+                                <t t-if="line.display_type == 'line_note'">
+                                    <td name="td_note_line" colspan="99">
+                                        <span t-field="line.name"/>
+                                    </td>
+                                </t>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+                <br/>
+                <style>
+                    #a_main_table td {
+                    padding: 0px 10px;
+                    }
+                </style>
+                <table width="100%" id="a_main_table" cellpadding="0"
+                       cellspacing="0" style="border: 2px solid black;">
+                    <tr>
+                        <td>
+                            <span style="white-space:nowrap;">Всього на суму
+                                <span t-esc="'{:10.2f}'.format(doc.amount_total).replace('.',',')"/>
+                                <span t-esc="doc.kw_currency_name"/>
+                                (<span t-esc="doc.kw_amount_ukr_text"/>)
+
+                            </span>
+                            <br>
+                            <t t-if="'{:10.2f}'.format(doc.amount_tax).replace('.',',')">
+                                <span style="white-space:nowrap;">В т.ч. ПДВ :
+                                    <span t-esc="'{:10.2f}'.format(doc.amount_tax)"/>
+                                    <span t-esc="doc.kw_currency_name"/>
+                                    (<span t-esc="doc.kw_taxed_ukr_text"/>)
+                                </span>
+                            </t>
+                            </br>
+                            <br>
+                            <t t-if="doc.kw_discount_sum > 0">
+                                <span style="white-space:nowrap;">Сума знижки
+                                    :
+                                    <span t-esc="'{:10.2f}'.format(doc.kw_discount_sum).replace('.',',')"/>
+                                    <span t-esc="doc.kw_currency_name"/>
+                                    (
+                                    <span t-esc="doc.kw_discount_sum_ukr_text"/>
+                                    ),
+                                </span>
+                            </t>
+                            </br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="50%" align="right">
+                            Товар відпустив:
+                            <span style="white-space:nowrap;">
+                                ____________________
+                            </span>
+                            <t t-if="doc.user_id">
+                                <span t-field="doc.user_id"/>
+                            </t>
+                            <t t-else="">
+                                <span style="white-space:nowrap;">
+                                    ______________________________
+                                </span>
+                            </t>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </t>
+    </template>
+
+
+    <template id="kw_so_chek_container">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="kw_so_chek.kw_so_chek_template"
+                   t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>
