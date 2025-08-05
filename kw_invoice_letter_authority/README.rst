@@ -1,3 +1,0 @@
-Letter Authority Invoice
-==============================
-
