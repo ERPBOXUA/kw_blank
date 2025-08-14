@@ -1,6 +1,7 @@
 {
     'name': 'Akt Vikonanih Robit SO for Ukraine',
-    'summary': 'Akt Vikonanih Robit Акт виконаних робіт Бланк "Акт виконаних робіт Sale Order" '
+    'summary': 'Akt Vikonanih Robit Акт виконаних \
+                робіт Бланк "Акт виконаних робіт Sale Order" '
                'Друк форми бухгалтерського документу для України'
                'Замовлення на продаж Sale order',
 
@@ -9,9 +10,9 @@
 
     'category': 'Accounting',
     'license': 'LGPL-3',
-    'version': '16.0.0.0.1',
+    'version': '17.0.0.1.1',
 
-    'depends': ['sale', 'kw_so_doc_base', 'kw_discount_sum'],
+    'depends': ['sale', 'kw_so_doc_base'],
 
     'data': [
         'report/report.xml',

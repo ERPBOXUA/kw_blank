@@ -1,0 +1,346 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kw_invoice_letter_authority
+# 	* kw_employee_requizites
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-13 10:39+0000\n"
+"PO-Revision-Date: 2022-06-13 10:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kw_invoice_letter_authority
+#: model:ir.actions.report,print_report_name:kw_invoice_letter_authority.kw_invoice_letter_authority_account_move_report
+msgid ""
+"(object.state in ('draft', 'sent') and 'Letter Authority - %s' % "
+"(object.name)) or 'Letter Authority - %s' % (object.name)"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"(зразок підпису особи, що\n"
+"                        одержала довіреність)"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "(найменування банку)"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"<b>\n"
+"                                Найменування цінностей\n"
+"                            </b>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"<b>Кіл-сть\n"
+"                            </b>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<b>Од.виміру</b>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<b>№</b>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"<br/>\n"
+"                        <small>Додаток 1</small>\n"
+"                        <br/>\n"
+"                        <small>до Інструкції про порядок реєстрації</small>\n"
+"                        <br/>\n"
+"                        <small>виданих, повернених і використаних</small>\n"
+"                        <br/>\n"
+"                        <small>довіреностей на одержання цінностей</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>________________________________________________</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"<small>____________________________________________________________</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"<small>___________________________________________________________________________</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>Довіреність дійсна</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"<small>Додаток 1</small>\n"
+"                        <br/>\n"
+"                        <small>до Інструкції про порядок реєстрації</small>\n"
+"                        <br/>\n"
+"                        <small>виданих, повернених і використаних</small>\n"
+"                        <br/>\n"
+"                        <small>довіреностей на одержання цінностей</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>МФО</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>Той самий</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>до</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>код ЄДРПОУ</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>р</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>рахунок</small>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "<small>ідентифікаційний</small>"
+msgstr ""
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__chief_accountant_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__chief_accountant_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__chief_accountant_id
+#: model_terms:ir.ui.view,arch_db:kw_employee_requizites.kw_employee_requizites_account_move_form
+msgid "Chief Accountant"
+msgstr "Головний бухгалтер"
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__date_issue
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__date_issue
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__date_issue
+msgid "Date of issue"
+msgstr "Дата видачі"
+
+#. module: kw_employee_requizites
+#: model:ir.model,name:kw_employee_requizites.model_hr_employee
+msgid "Employee"
+msgstr "Співробітник"
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__head_enterprise_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__head_enterprise_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__head_enterprise_id
+msgid "Head Enterprise"
+msgstr "Керівник підприємства"
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__hr_employee_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__hr_employee_id
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__hr_employee_id
+msgid "Hr Employee"
+msgstr "Співробітник"
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__issued
+msgid "Issued"
+msgstr "Ким виданий"
+
+#. module: kw_employee_requizites
+#: model:ir.model,name:kw_employee_requizites.model_account_move
+msgid "Journal Entry"
+msgstr "Запис у журналі"
+
+#. module: kw_invoice_letter_authority
+#: model:ir.actions.report,name:kw_invoice_letter_authority.kw_invoice_letter_authority_account_move_report
+msgid "Letter Authority Invoice"
+msgstr "Довіреність"
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__number_document
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__number_document
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__number_document
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__number_document
+msgid "Number Document"
+msgstr "Номер документу"
+
+#. module: kw_employee_requizites
+#: model_terms:ir.ui.view,arch_db:kw_employee_requizites.kw_employee_requizites_hr_employee_form
+msgid "Passport"
+msgstr "Документ що засвідчує особу"
+
+#. module: kw_employee_requizites
+#: model_terms:ir.ui.view,arch_db:kw_employee_requizites.kw_employee_requizites_account_move_form
+msgid "Power of attorney"
+msgstr "Довіреність"
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__serial_document
+msgid "Serial Document"
+msgstr "Серія"
+
+#. module: kw_employee_requizites
+#: model_terms:ir.ui.view,arch_db:kw_employee_requizites.kw_employee_requizites_account_move_form
+msgid "The head of the enterprise"
+msgstr "Керівник підприємства"
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__type_document
+msgid "Type Document"
+msgstr "Тип документу"
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_bank_statement_line__valid_until
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_move__valid_until
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_account_payment__valid_until
+msgid "Valid Until"
+msgstr "Дійсний до"
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"_____________________________________________________________________________________________________________________________________"
+msgstr ""
+
+#. module: kw_employee_requizites
+#: model:ir.model.fields,field_description:kw_employee_requizites.field_hr_employee__issued_date
+msgid "issuance date"
+msgstr "Коли видано"
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Виданий"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Видано"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Головний бухгалтер"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Дата видачі"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Довіреність №"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Документ, що засвідчує особу"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Зворотний бік форми N М-2"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Керівник Підприємства"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Місце печатки"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "На отримання від"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Перелік цінностей, які належать отримати:"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Підпис"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Серія"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "Типова форма N M2"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "від"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "засвідчую"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "підприємство-одержувач і його адреса"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "підприємство-платник і його адреса"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid ""
+"р\n"
+"                            <br/>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: kw_invoice_letter_authority
+#: model_terms:ir.ui.view,arch_db:kw_invoice_letter_authority.kw_invoice_letter_authority_template
+msgid "цінностей за"
+msgstr ""

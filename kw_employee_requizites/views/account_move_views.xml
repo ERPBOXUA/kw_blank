@@ -1,0 +1,21 @@
+<odoo>
+    <record model="ir.ui.view" id="kw_employee_requizites_account_move_form">
+        <field name="name">account.move.form (kw_employee_requizites)</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='other_info']" position="after">
+                <page name="power_of_attorney" string="Power of attorney">
+                    <group>
+                        <field name="number_document"/>
+                        <field name="hr_employee_id"/>
+                        <field name="date_issue"/>
+                        <field name="valid_until"/>
+                        <field name="head_enterprise_id" string="The head of the enterprise"/>
+                        <field name="chief_accountant_id" string="Chief Accountant"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

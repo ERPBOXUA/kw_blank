@@ -1,0 +1,3 @@
+- override the name_create method to set parent_id
+- fix bug
+- code cleanup

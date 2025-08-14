@@ -9,9 +9,9 @@
 
     'category': 'Customizations',
     'license': 'LGPL-3',
-    'version': '16.0.0.0.1',
+    'version': '17.0.0.1.1',
 
-    'depends': ['account', 'kw_invoice_doc_base', 'kw_discount_sum'],
+    'depends': ['account', 'kw_invoice_doc_base'],
 
     'data': [
         'report/report.xml',

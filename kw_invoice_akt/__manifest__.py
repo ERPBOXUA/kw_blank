@@ -1,6 +1,7 @@
 {
     'name': 'Akt Vikonanih Robit Invoice for Ukraine',
-    'summary': 'Akt vykonanyh robit Акт виконатих робіт Бланк "Акт виконаних робіт Invoice" '
+    'summary': 'Akt vykonanyh robit Акт виконатих робіт \
+                Бланк "Акт виконаних робіт Invoice" '
                'друкована форма/ Акт виконаних робіт/ '
                'первинка/ документ/ Рахунок покупцю/Invoice',
 
@@ -9,9 +10,9 @@
 
     'category': 'Customizations',
     'license': 'LGPL-3',
-    'version': '16.0.0.0.1',
+    'version': '17.0.0.1.1',
 
-    'depends': ['account', 'kw_invoice_doc_base', 'kw_discount_sum'],
+    'depends': ['account', 'kw_invoice_doc_base'],
 
     'data': [
         'report/report.xml',

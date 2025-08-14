@@ -1,6 +1,6 @@
 import logging
 
-from odoo import models, fields
+from odoo import api, models, fields
 
 _logger = logging.getLogger(__name__)
 
@@ -32,6 +32,18 @@ class Partner(models.Model):
         comodel_name='res.partner', )
     kw_taxation_scheme_id = fields.Many2one(
         string='Taxation scheme', comodel_name='kw.taxation.scheme')
+
+    @api.model
+    def name_create(self, name):
+        partner_id_ref, partner_name = super().name_create(name)
+
+        partner_id = self.browse(partner_id_ref)
+        if not partner_id.parent_id:
+            partner_id.write({
+                'parent_id': self.env.context.get('default_partner_id', False)
+            })
+
+        return partner_id_ref, partner_name
 
 
 class TaxStatus(models.Model):

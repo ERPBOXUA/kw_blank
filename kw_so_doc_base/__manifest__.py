@@ -1,7 +1,7 @@
 {
     'name': 'SO print document for Ukraine',
 
-    'version': '16.0.0.0.1',
+    'version': '17.0.0.0.3',
     'author': 'Kitworks Systems',
     'website': 'https://kitworks.systems/',
     'license': 'OPL-1',

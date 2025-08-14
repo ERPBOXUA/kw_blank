@@ -1,0 +1,18 @@
+<odoo>
+    <record model="ir.ui.view" id="kw_employee_requizites_hr_employee_form">
+        <field name="name">hr.employee.form (kw_employee_requizites)</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='personal_information']/group" position="inside">
+                <group string="Passport">
+                    <field name="type_document"/>
+                    <field name="serial_document"/>
+                    <field name="number_document"/>
+                    <field name="issued_date"/>
+                    <field name="issued"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
