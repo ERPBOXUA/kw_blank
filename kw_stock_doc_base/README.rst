@@ -1,3 +1,0 @@
-Stock print document base
-==============================
-

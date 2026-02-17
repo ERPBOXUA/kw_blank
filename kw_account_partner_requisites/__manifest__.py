@@ -1,6 +1,6 @@
 {
     'name': 'Partner requisites for accounting',
-    'version': '14.0.1.0.4',
+    'version': '18.0.0.0.1',
 
     'author': 'Kitworks Systems',
     'website': 'https://kitworks.systems/',

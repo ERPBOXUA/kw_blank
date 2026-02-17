@@ -5,6 +5,9 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="type">form</field>
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_totals']" position="before">
+                <field name="kw_discount_sum" widget="monetary"/>
+            </xpath>
             <notebook position="inside">
                 <page string="Document requisites">
                     <group>
